@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.example.hilt_android.db.AppDatabase
 import com.example.hilt_android.db.UserDao
 import com.example.hilt_android.network.RestApiServices
+import com.example.hilt_android.practice_network.call_adapter.LiveDataCallAdapterFactory
 import com.example.hilt_android.util.Constants
 import dagger.Module
 import dagger.Provides
@@ -26,9 +27,10 @@ class AppModule{
     @Provides
     fun provideRetrofit(client: OkHttpClient): RestApiServices = Retrofit.Builder()
         .baseUrl(Constants.BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .client(client)
-            .build()
+        .addConverterFactory(GsonConverterFactory.create())
+        .addCallAdapterFactory(LiveDataCallAdapterFactory())
+        .client(client)
+        .build()
         .create(RestApiServices::class.java)
 
     @Singleton

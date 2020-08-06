@@ -2,12 +2,14 @@ package com.example.hilt_android.ui
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
-import com.example.hilt_android.util.liveResponse
+import com.example.hilt_android.util.listLiveResponse
 
 
 class HomeViewModel @ViewModelInject constructor(
     private val repo: HomeRepo
 ) : ViewModel() {
 
-    fun getUsers() = liveResponse { repo.getAllUsers() }
+    fun getUsers() = listLiveResponse { repo.getAllUsers() }
+
+    fun getUser(id: Int) = repo.loadUser(id)
 }
