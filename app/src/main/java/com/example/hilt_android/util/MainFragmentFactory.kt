@@ -2,7 +2,7 @@ package com.example.hilt_android.util
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
-import com.example.hilt_android.ui.HomeFragment
+import com.example.hilt_android.ui.home_fragment.HomeFragment
 import javax.inject.Inject
 
 class MainFragmentFactory

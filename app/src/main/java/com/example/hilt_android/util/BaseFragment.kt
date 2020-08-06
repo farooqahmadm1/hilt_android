@@ -5,9 +5,9 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.navOptions
-import com.example.hilt_android.MainActivity
 import com.example.hilt_android.R
 import com.example.hilt_android.network.ErrorType
+import com.example.hilt_android.ui.MainActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -27,11 +27,6 @@ abstract class BaseFragment : Fragment() {
     }
 
     protected var fragmentView: View? = null
-
-//    constructor() : super()
-//    constructor(@LayoutRes layout: Int) : super(layout)
-//    protected abstract fun initComponent(appComponent: MovieAppComponent)
-
 
     override fun onDestroyView() {
         super.onDestroyView()

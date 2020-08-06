@@ -1,4 +1,4 @@
-package com.example.hilt_android.ui
+package com.example.hilt_android.ui.home_fragment
 
 import androidx.lifecycle.LiveData
 import com.example.hilt_android.db.UserDao

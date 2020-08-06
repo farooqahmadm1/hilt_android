@@ -1,4 +1,4 @@
-package com.example.hilt_android.ui
+package com.example.hilt_android.ui.home_fragment
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel

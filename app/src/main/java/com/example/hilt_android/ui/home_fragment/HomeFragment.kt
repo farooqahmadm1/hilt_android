@@ -1,4 +1,4 @@
-package com.example.hilt_android.ui
+package com.example.hilt_android.ui.home_fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -36,7 +36,7 @@ class HomeFragment(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Log.d(Companion.TAG, "onViewCreated: $something")
+        Log.d(TAG, "onViewCreated: $something")
 
         viewModel.getUsers().observe(viewLifecycleOwner,
             Observer {

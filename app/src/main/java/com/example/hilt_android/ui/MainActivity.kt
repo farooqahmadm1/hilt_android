@@ -1,12 +1,9 @@
-package com.example.hilt_android
+package com.example.hilt_android.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import dagger.android.AndroidInjector
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasAndroidInjector
+import com.example.hilt_android.R
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 
 @AndroidEntryPoint
