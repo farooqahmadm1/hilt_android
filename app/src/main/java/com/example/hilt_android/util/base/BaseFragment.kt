@@ -1,4 +1,4 @@
-package com.example.hilt_android.util
+package com.example.hilt_android.util.base
 
 import android.view.View
 import android.widget.TextView
@@ -8,12 +8,12 @@ import androidx.navigation.navOptions
 import com.example.hilt_android.R
 import com.example.hilt_android.network.ErrorType
 import com.example.hilt_android.ui.MainActivity
+import com.example.hilt_android.util.Utils
+import com.example.hilt_android.util.longSnackbar
+import com.example.hilt_android.util.snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-/**
- * Created by eagskunst in 3/9/2019.
- */
 abstract class BaseFragment : Fragment() {
 
     protected val unknownErrorMessage: String by lazy {

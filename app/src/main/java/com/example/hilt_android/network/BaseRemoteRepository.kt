@@ -10,7 +10,7 @@ import java.io.IOException
 import java.net.SocketTimeoutException
 
 /**
- * Created by eagskunst in 1/12/2019.
+ * Created by farooq in 1/6/2020
  */
 abstract class BaseRemoteRepository {
 

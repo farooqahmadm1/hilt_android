@@ -1,4 +1,4 @@
-package com.example.hilt_android.util
+package com.example.hilt_android.util.base
 
 import android.app.Application
 import android.content.Context

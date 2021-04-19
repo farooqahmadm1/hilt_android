@@ -1,4 +1,4 @@
-package com.example.hilt_android.util
+package com.example.hilt_android.util.navigation
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory

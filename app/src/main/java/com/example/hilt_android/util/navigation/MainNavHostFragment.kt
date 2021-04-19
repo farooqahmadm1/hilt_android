@@ -1,4 +1,4 @@
-package com.example.hilt_android.util
+package com.example.hilt_android.util.navigation
 
 import android.content.Context
 import androidx.navigation.fragment.NavHostFragment

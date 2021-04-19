@@ -12,7 +12,7 @@ import com.example.hilt_android.R
 import com.example.hilt_android.databinding.FragmentHomeBinding
 import com.example.hilt_android.network.ResponseResult
 import com.example.hilt_android.practice_network.Resource
-import com.example.hilt_android.util.BaseFragment
+import com.example.hilt_android.util.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -28,7 +28,7 @@ class HomeFragment(
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         return binding.root
     }

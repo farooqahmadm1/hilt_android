@@ -28,18 +28,7 @@ inline fun <T> liveResponse(crossinline body: suspend () -> ResponseResult<T>) =
 inline fun <T> listLiveResponse(crossinline body: suspend () -> ResponseResult<List<T>>) =
     liveData(Dispatchers.IO) {
         emit(ResponseResult.Pending)
-        var result = body()
-        result = body()
-        result = body()
-        result = body()
-        result = body()
-        result = body()
-        result = body()
-        result = body()
-        result = body()
-        result = body()
-        result = body()
-        result = body()
+        val result = body()
         emit(result)
         emit(ResponseResult.Complete)
     }
