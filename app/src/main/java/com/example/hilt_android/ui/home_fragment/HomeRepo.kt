@@ -20,18 +20,7 @@ class HomeRepo @Inject constructor(
     private val appExecutors: AppExecutors
 ) : BaseRemoteRepository() {
 
-    suspend fun getAllUsers() = withContext(Dispatchers.IO) {
-        when (val obj = safeApiCall { apiServices.getPostList() }!!) {
-            is ResponseResult.Success -> {
-                userDao.insert(obj.data)
-                ResponseResult.Success(obj.data)
-            }
-            is ResponseResult.Error -> {
-                ResponseResult.Error(obj.message, obj.type)
-            }
-            else -> ResponseResult.Error("", ErrorType.UNKNOWN)
-        }
-    }
+    suspend fun getAllUsers() = withContext(Dispatchers.IO) { safeApiCall { apiServices.getPostList() }!! }
 
     fun loadUser(login: Int): LiveData<Resource<UserResponse>> {
         return object : NetworkBoundResource<UserResponse, UserResponse>(appExecutors) {
